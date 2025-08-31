@@ -1,0 +1,14 @@
+node_modules
+dist
+.DS_Store
+server/public
+vite.config.ts.*
+*.tar.gz
+.env
+package-lock.json
+./package-lock.json
+rest-express@1.0.0
+./migrations
+migrations
+./NODE_ENV=development
+NODE_ENV=development

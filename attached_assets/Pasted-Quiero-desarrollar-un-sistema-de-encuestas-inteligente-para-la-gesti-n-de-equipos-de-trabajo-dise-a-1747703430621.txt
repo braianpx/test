@@ -1,0 +1,177 @@
+Quiero desarrollar un sistema de encuestas inteligente para la gestión de equipos de trabajo, diseñado para optimizar la recolección de datos de campo con funcionalidades avanzadas de administración y geolocalización en tiempo real. El sistema debe estar construido con tecnologías modernas y debe cumplir los siguientes requerimientos:
+
+💡 Objetivo:
+Crear una plataforma de encuestas para gestionar equipos de encuestadores, recolectar datos geolocalizados y visualizar resultados en un panel de administración en tiempo real.
+
+🌐 Estructura del Proyecto:
+Frontend:
+
+Framework: React (Vite) + TailwindCSS para un diseño moderno y responsivo.
+
+Geolocalización: Uso de APIs de geolocalización del navegador (HTML5 Geolocation API).
+
+Manejo de Estado: Redux Toolkit o Zustand.
+
+Gestión de Formularios: Formik + Yup para validaciones.
+
+Mapas y Tracking: Mapbox o Leaflet para visualizar la ubicación de los encuestadores en tiempo real.
+
+Almacenamiento Local: Uso de LocalStorage para guardar datos de usuario y encuestas.
+
+Backend:
+
+Framework: Node.js con NestJS para la estructura del servidor.
+
+Base de Datos: PostgreSQL para datos estructurados y consultas eficientes.
+
+API REST: Endpoints seguros para gestión de usuarios, encuestas, zonas y seguimiento de encuestadores.
+
+Geolocalización en Tiempo Real: WebSockets (Socket.IO) para actualizar la ubicación en el dashboard.
+
+Autenticación y Autorización: JWT con roles (admin, supervisor, encuestador).
+
+Infraestructura:
+
+Despliegue: Docker para contenerización.
+
+Hosting: AWS (EC2 para backend, S3 para almacenamiento estático).
+
+Monitoreo y Logs: Prometheus y Grafana para métricas de uso y rendimiento.
+
+Notificaciones: Push Notifications para iniciar o finalizar turnos de trabajo.
+
+📊 Roles y Permisos:
+Admin:
+
+Dashboard centralizado.
+
+Alta de usuarios: crear y gestionar admins, supervisores y encuestadores.
+
+Gestión de encuestas: crear, modificar y eliminar encuestas.
+
+Asignación de zonas: asociar encuestas a zonas geográficas.
+
+Seguimiento en tiempo real: ver ubicación actual de encuestadores en el mapa.
+
+Visualización de resultados: acceder a estadísticas y datos recolectados.
+
+Supervisor:
+
+Crear encuestas y asignarlas a zonas específicas.
+
+Asignación de encuestadores a zonas.
+
+Visualización en tiempo real de los encuestadores en su zona.
+
+Acceso a resultados preliminares de encuestas.
+
+Encuestador:
+
+Iniciar y finalizar turno de trabajo (activación del tracking GPS).
+
+Acceso a encuestas asignadas.
+
+Recolección de respuestas con validación automática.
+
+Ver su posición en el mapa en tiempo real.
+
+Guardar datos en modo offline (uso de LocalStorage).
+
+🚀 Funcionalidades Clave:
+Dashboard Administrador:
+
+Visualización general de usuarios activos.
+
+Mapa interactivo con la ubicación de encuestadores en tiempo real.
+
+Gráficas de resultados de encuestas.
+
+Filtro por zona y encuestador.
+
+Estadísticas en tiempo real sobre el avance de encuestas.
+
+Gestión de Usuarios:
+
+Crear, modificar y eliminar usuarios.
+
+Asignación de roles y permisos.
+
+Registro de actividad de cada usuario.
+
+Gestión de Encuestas:
+
+Crear encuestas con preguntas abiertas, cerradas y de opción múltiple.
+
+Subir encuestas desde archivo CSV o a través de un editor visual.
+
+Asignar zonas geográficas a cada encuesta.
+
+Publicación de encuestas para encuestadores.
+
+Seguimiento GPS:
+
+Registro de inicio y fin de turno del encuestador.
+
+Geolocalización en tiempo real mientras el encuestador está en turno.
+
+Mapa con trazabilidad histórica de rutas realizadas.
+
+Resultados y Reportes:
+
+Visualización gráfica de resultados de encuestas.
+
+Descarga de reportes en formatos PDF o Excel.
+
+Filtro por zona, encuesta y encuestador.
+
+📝 Mockup de Datos:
+Usuarios de ejemplo:
+
+Admin: admin / admin
+
+Supervisor: super / super
+
+Encuestador: encuesta / encuesta
+
+Encuestas predefinidas:
+
+Encuesta de Satisfacción
+
+Encuesta de Necesidades de Servicio
+
+Zonas de ejemplo:
+
+Zona Norte, Zona Sur, Zona Centro.
+
+🌍 Tracking en Tiempo Real:
+Al iniciar el turno, el encuestador activa el tracking GPS.
+
+El administrador puede ver el movimiento del encuestador en el dashboard.
+
+Al finalizar el turno, se desactiva el rastreo y se guarda el recorrido realizado.
+
+💾 Datos Mockeados:
+Encuestas y usuarios almacenados inicialmente en LocalStorage.
+
+Datos simulados para pruebas de visualización en el dashboard.
+
+Uso de Faker.js para generar respuestas aleatorias en el entorno de demo.
+
+🔄 Alcances:
+Versión de demostración con datos simulados.
+
+Funcionalidad offline para creación de encuestas y usuarios.
+
+Trackeo GPS limitado a dispositivos con permisos habilitados.
+
+Autenticación y autorización para cada rol.
+
+✅ Criterios de Aceptación:
+El administrador puede crear usuarios y encuestas correctamente.
+
+El encuestador puede iniciar turno y registrar su ubicación.
+
+El dashboard muestra el seguimiento en tiempo real.
+
+Los datos de encuestas se visualizan en el panel de resultados.
+
