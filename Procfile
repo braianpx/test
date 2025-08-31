@@ -1,1 +1,2 @@
-start: npm run migrate && npm run db:push && npm run start 
+release: npm run migrate && npm run db:push
+start: npm run start
